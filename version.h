@@ -2,8 +2,6 @@
 #define MINOR_VERSION 1
 #define PATCH_VERSION 0
 
-
-
 typedef struct
 {
    unsigned short int Major, Minor, Patch;

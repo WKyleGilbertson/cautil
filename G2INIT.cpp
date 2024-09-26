@@ -28,7 +28,7 @@ PRNGEN(CACODE, prn, cphase);
 DSPCODE(CODE, CACODE);
 }
 
-int G2INIT::PRNGEN(char * CACODE, uint8_t PRN, uint16_t CODEPHASE) {
+int G2INIT::PRNGEN(uint8_t * CACODE, uint8_t PRN, uint16_t CODEPHASE) {
   //int main(int argc, char * argv[]) {
 //  if (argc < 2) exit(1);
 //  unsigned short PRN = atoi(argv[1]);
@@ -95,7 +95,7 @@ int G2INIT::PRNGEN(char * CACODE, uint8_t PRN, uint16_t CODEPHASE) {
 return 0;
 }
 
-int G2INIT::DSPCODE(char * CODE, char * CACODE) {
+int G2INIT::DSPCODE(int8_t * CODE, uint8_t * CACODE) {
 uint16_t idx;
   for (idx=0; idx<1023; idx++) {
     CODE[idx] = (CACODE[idx] == 1) ? 1 : -1;
